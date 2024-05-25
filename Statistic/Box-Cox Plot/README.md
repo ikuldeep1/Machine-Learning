@@ -41,7 +41,7 @@ plt.grid(True)
 plt.show()
 
 print(f'Optimal lambda: {lambda_optimal}')
-
+```
 # Interview Questions on Box-Cox Plot
 
 1. **What is the purpose of the Box-Cox transformation?**
