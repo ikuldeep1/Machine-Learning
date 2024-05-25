@@ -102,3 +102,30 @@ Answer:
 - A large D suggests that the two samples come from different distributions.
 
 2. **Python Function for Two-Sample K-S Test:**:
+```
+import numpy as np
+from scipy import stats
+
+def two_sample_ks_test(sample1, sample2):
+    # Perform the two-sample Kolmogorov-Smirnov test
+    d_statistic, p_value = stats.ks_2samp(sample1, sample2)
+    
+    return d_statistic, p_value
+
+# Example usage:
+sample1 = np.array([0.2, -0.3, 0.1, 0.4, -0.5])
+sample2 = np.array([0.3, -0.2, 0.15, 0.5, -0.45])
+
+d_statistic, p_value = two_sample_ks_test(sample1, sample2)
+print(f"D-statistic: {d_statistic}")
+print(f"P-value: {p_value}")
+
+# Interpretation
+alpha = 0.05
+if p_value < alpha:
+    print("Reject the null hypothesis: The two samples come from different distributions")
+else:
+    print("Fail to reject the null hypothesis: The two samples come from the same distribution")
+```
+
+This code performs a two-sample K-S test, comparing the empirical distributions of sample1 and sample2. The function two_sample_ks_test computes the D-statistic and p-value, which are then used to determine whether the samples come from the same distribution.
