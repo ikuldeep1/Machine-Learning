@@ -12,3 +12,14 @@ Suppose we have the following sample data:
 ```
 Sample: [0.2, -0.3, 0.1, 0.4, -0.5]
 ```
+
+### Steps:
+1. **Sort the sample data**:
+
+```
+Sorted Sample: [-0.5, -0.3, 0.1, 0.2, 0.4]
+```
+
+2. **Calculate the empirical distribution function (EDF) at each point:**:
+
+EDF(x) = (number of points ≤ x) / total number of points
