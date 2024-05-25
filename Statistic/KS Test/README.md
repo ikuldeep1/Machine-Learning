@@ -9,24 +9,24 @@ Let's consider a one-sample K-S test to see if a given sample comes from a stand
 ### Sample Data
 Suppose we have the following sample data:
 
-```
+```python
 Sample: [0.2, -0.3, 0.1, 0.4, -0.5]
 ```
 
 ### Steps:
 1. **Sort the sample data**:
 
-```
+```python
 Sorted Sample: [-0.5, -0.3, 0.1, 0.2, 0.4]
 ```
 
 2. **Calculate the empirical distribution function (EDF) at each point:**:
-```
+```python
 EDF(x) = (number of points ≤ x) / total number of points
 ```
 
 #### For our sample:
-```
+```python
 EDF(-0.5) = 1/5 = 0.2
 EDF(-0.3) = 2/5 = 0.4
 EDF(0.1) = 3/5 = 0.6
@@ -35,7 +35,7 @@ EDF(0.4) = 5/5 = 1.0
 ```
 
 3. **Calculate the CDF of the reference distribution at each point. For the standard normal distribution, we use the cumulative distribution function (CDF) of the normal distribution.**:
-```
+```python
 CDF(-0.5) ≈ 0.3085
 CDF(-0.3) ≈ 0.3821
 CDF(0.1) ≈ 0.5398
@@ -44,7 +44,7 @@ CDF(0.4) ≈ 0.6554
 ```
 
 4. **Compute the absolute differences between the EDF and the CDF at each sample point and find the maximum difference (D):**:
-```
+```python
 |EDF(-0.5) - CDF(-0.5)| = |0.2 - 0.3085| = 0.1085
 |EDF(-0.3) - CDF(-0.3)| = |0.4 - 0.3821| = 0.0179
 |EDF(0.1) - CDF(0.1)| = |0.6 - 0.5398| = 0.0602
@@ -60,7 +60,7 @@ CDF(0.4) ≈ 0.6554
 
 ### Python code
 
-```
+```python
 import numpy as np
 from scipy import stats
 
@@ -102,7 +102,7 @@ Answer:
 - A large D suggests that the two samples come from different distributions.
 
 2. **Python Function for Two-Sample K-S Test:**:
-```
+```python
 import numpy as np
 from scipy import stats
 
