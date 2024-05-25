@@ -83,10 +83,10 @@ else:
 
 ### Explanation of the Code
 1. **Import necessary libraries: numpy for numerical operations and scipy.stats for statistical functions.**
-2. **Define the sample data.**
-3. **Use kstest from scipy.stats: This function computes the K-S test for a sample against a reference distribution.**:
- - **'norm' specifies the standard normal distribution.**
- - **args=(0, 1) specifies the parameters of the normal distribution (mean = 0, standard deviation = 1)**
+2.  **Define the sample data.**
+3.  **Use kstest from scipy.stats: This function computes the K-S test for a sample against a reference distribution.**:
+    - 'norm' specifies the standard normal distribution.
+    - args=(0, 1) specifies the parameters of the normal distribution (mean = 0, standard deviation = 1)
 4. **Print the D-statistic and p-value.**
 5. **Interpret the p-value**: If the p-value is less than the significance level (α = 0.05), we reject the null hypothesis that the sample comes from the specified distribution.
 
@@ -95,11 +95,11 @@ Question: Explain the Kolmogorov-Smirnov test and write a Python function to per
 
 Answer:
 
-1. **Explanation**:
+1.  **Explanation**:
 
-- The K-S test compares the empirical distribution functions of two samples.
-- It computes the maximum distance (D) between these EDFs.
-- A large D suggests that the two samples come from different distributions.
+    - The K-S test compares the empirical distribution functions of two samples.
+    - It computes the maximum distance (D) between these EDFs.
+    - A large D suggests that the two samples come from different distributions.
 
 2. **Python Function for Two-Sample K-S Test:**:
 ```python
