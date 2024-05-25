@@ -8,3 +8,7 @@ Let's consider a one-sample K-S test to see if a given sample comes from a stand
 
 ### Sample Data
 Suppose we have the following sample data:
+
+```
+Sample: [0.2, -0.3, 0.1, 0.4, -0.5]
+```
