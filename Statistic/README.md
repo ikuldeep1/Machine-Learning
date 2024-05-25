@@ -85,7 +85,10 @@ else:
 - **1. Import necessary libraries: numpy for numerical operations and scipy.stats for statistical functions.**
 - **2. Define the sample data.**
 - **3. Use kstest from scipy.stats: This function computes the K-S test for a sample against a reference distribution.**:
-- - **> 'norm' specifies the standard normal distribution.**
-- - **> args=(0, 1) specifies the parameters of the normal distribution (mean = 0, standard deviation = 1)**
+- - **'norm' specifies the standard normal distribution.**
+- - **args=(0, 1) specifies the parameters of the normal distribution (mean = 0, standard deviation = 1)**
 - **4. Print the D-statistic and p-value.**
-- **5. Interpret the p-value**:If the p-value is less than the significance level (α = 0.05), we reject the null hypothesis that the sample comes from the specified distribution.
+- **5. Interpret the p-value**: If the p-value is less than the significance level (α = 0.05), we reject the null hypothesis that the sample comes from the specified distribution.
+
+### Interview Question
+Question: Explain the Kolmogorov-Smirnov test and write a Python function to perform a two-sample K-S test, comparing two given samples. Provide an example of how to use this function.
